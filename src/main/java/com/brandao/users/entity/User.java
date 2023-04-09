@@ -1,6 +1,6 @@
 package com.brandao.users.entity;
 
-import com.brandao.users.entity.types.SexType;
+import com.brandao.users.entity.types.Gender;
 
 import java.util.Objects;
 
@@ -10,16 +10,16 @@ public class User {
     private final String cpf;
     private final String email;
     private final String name;
-    private final SexType sexType;
+    private final Gender gender;
     private final Integer age;
     private final String docUrl;
 
-    public User(String id, String cpf, String email, String name, SexType sexType, Integer age, String docUrl) {
+    public User(String id, String cpf, String email, String name, Gender gender, Integer age, String docUrl) {
         this.id = id;
         this.cpf = cpf;
         this.email = email;
         this.name = name;
-        this.sexType = sexType;
+        this.gender = gender;
         this.age = age;
         this.docUrl = docUrl;
     }
@@ -40,8 +40,8 @@ public class User {
         return name;
     }
 
-    public SexType getSexType() {
-        return sexType;
+    public Gender getGender() {
+        return gender;
     }
 
     public Integer getAge() {
@@ -61,7 +61,7 @@ public class User {
             return false;
         if (name == null || name.isEmpty())
             return false;
-        if (sexType == null)
+        if (gender == null)
             return false;
         if (age == null || age < 18)
             return false;
@@ -79,14 +79,14 @@ public class User {
                 Objects.equals(cpf, user.cpf) &&
                 Objects.equals(email, user.email) &&
                 Objects.equals(name, user.name) &&
-                sexType == user.sexType &&
+                gender == user.gender &&
                 Objects.equals(age, user.age) &&
                 Objects.equals(docUrl, user.docUrl);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cpf, email, name, sexType, age, docUrl);
+        return Objects.hash(id, cpf, email, name, gender, age, docUrl);
     }
 
     @Override
@@ -96,7 +96,7 @@ public class User {
                 ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
                 ", name='" + name + '\'' +
-                ", sexType=" + sexType +
+                ", gender=" + gender +
                 ", age=" + age +
                 ", docUrl='" + docUrl + '\'' +
                 '}';

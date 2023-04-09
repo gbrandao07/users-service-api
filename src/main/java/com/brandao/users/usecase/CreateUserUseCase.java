@@ -1,7 +1,7 @@
 package com.brandao.users.usecase;
 
 import com.brandao.users.entity.User;
-import com.brandao.users.entity.types.SexType;
+import com.brandao.users.entity.types.Gender;
 import com.brandao.users.usecase.exception.BadUserException;
 import com.brandao.users.usecase.exception.CouldNotSendEmailException;
 import com.brandao.users.usecase.exception.CouldNotValidateDocumentException;
@@ -40,7 +40,7 @@ public class CreateUserUseCase {
                     requestModel.getCpf(),
                     requestModel.getEmail(),
                     requestModel.getName(),
-                    SexType.fromString(requestModel.getSexType()),
+                    Gender.fromString(requestModel.getGender()),
                     age,
                     requestModel.getDocUrl()
             );

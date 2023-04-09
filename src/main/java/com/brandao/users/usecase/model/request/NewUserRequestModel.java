@@ -8,16 +8,16 @@ public class NewUserRequestModel {
     private final String cpf;
     private final String email;
     private final String name;
-    private final String sexType;
+    private final String gender;
     private final String age;
     private final String docUrl;
 
-    public NewUserRequestModel(String id, String cpf, String email, String name, String sexType, String age, String docUrl) {
+    public NewUserRequestModel(String id, String cpf, String email, String name, String gender, String age, String docUrl) {
         this.id = id;
         this.cpf = cpf;
         this.email = email;
         this.name = name;
-        this.sexType = sexType;
+        this.gender = gender;
         this.age = age;
         this.docUrl = docUrl;
     }
@@ -38,8 +38,8 @@ public class NewUserRequestModel {
         return name;
     }
 
-    public String getSexType() {
-        return sexType;
+    public String getGender() {
+        return gender;
     }
 
     public String getAge() {
@@ -59,14 +59,14 @@ public class NewUserRequestModel {
                 Objects.equals(cpf, that.cpf) &&
                 Objects.equals(email, that.email) &&
                 Objects.equals(name, that.name) &&
-                Objects.equals(sexType, that.sexType) &&
+                Objects.equals(gender, that.gender) &&
                 Objects.equals(age, that.age) &&
                 Objects.equals(docUrl, that.docUrl);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cpf, email, name, sexType, age, docUrl);
+        return Objects.hash(id, cpf, email, name, gender, age, docUrl);
     }
 
     @Override
@@ -76,7 +76,7 @@ public class NewUserRequestModel {
                 ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
                 ", name='" + name + '\'' +
-                ", sexType='" + sexType + '\'' +
+                ", gender='" + gender + '\'' +
                 ", age='" + age + '\'' +
                 ", docUrl='" + docUrl + '\'' +
                 '}';

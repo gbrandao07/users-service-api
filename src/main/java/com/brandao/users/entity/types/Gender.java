@@ -1,21 +1,21 @@
 package com.brandao.users.entity.types;
 
-public enum SexType {
+public enum Gender {
 
     MALE,
     FEMALE,
-    TRANSGER,
+    TRANSGENDER,
     OTHER,
     NOT_INFORMED;
 
-    public static SexType fromString(String text) {
+    public static Gender fromString(String text) {
         switch (text.toLowerCase()) {
             case "male":
                 return MALE;
             case "female":
                 return FEMALE;
-            case "transger":
-                return TRANSGER;
+            case "transgender":
+                return TRANSGENDER;
             case "other":
                 return OTHER;
             default:

@@ -1,9 +1,7 @@
 package com.brandao.users.entity;
 
-import com.brandao.users.entity.types.SexType;
+import com.brandao.users.entity.types.Gender;
 import org.junit.jupiter.api.Test;
-
-import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -17,7 +15,7 @@ public class UserTest {
                 "444 444 000 01",
                 "gustavob@test.com",
                 "Gustavo B",
-                SexType.MALE,
+                Gender.MALE,
                 29,
                 "somelink.com/doc01.png"
         );
@@ -33,7 +31,7 @@ public class UserTest {
                 "444 444 000 01",
                 "gustavob@test.com",
                 "",
-                SexType.MALE,
+                Gender.MALE,
                 29,
                 "somelink.com/doc01.png"
         );
